@@ -1,0 +1,22 @@
+{
+  "format": 1,
+  "name": "EclipseCord repository",
+  "generation": 3,
+  "updatedAt": "2026-10-30T22:28:25.777Z",
+  "revoked": [
+    "privacy-blur"
+  ],
+  "items": [
+    {
+      "id": "mocha",
+      "type": "theme",
+      "name": "Mocha",
+      "description": "Coffee browns with cream text.",
+      "version": "1.0.0",
+      "author": "CallMeSDS",
+      "category": "Test",
+      "url": "themes/mocha.css",
+      "sha256": "ce0c286ce3746a1f9a3ca1d8655732ea392c08292e7dea3c5e627b08f4b6c98d"
+    }
+  ]
+}

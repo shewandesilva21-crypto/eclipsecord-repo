@@ -1,0 +1,27 @@
+/*
+ * @name Mocha
+ * @version 1.0.0
+ * @author CallMeSDS
+ * @description Coffee browns with cream text.
+ * @var --ec-bg color #16110d Background
+ * @var --ec-surface color #1f1812 Panels
+ * @var --ec-text color #efe3d3 Text
+ * @var --ec-link color #fdba74 Link colour
+ */
+:root, .theme-dark, .theme-darker, .theme-light {
+  --background-primary: var(--ec-bg);
+  --background-secondary: var(--ec-surface);
+  --background-secondary-alt: var(--ec-surface);
+  --background-tertiary: #0f0b08;
+  --background-base-lowest: #0f0b08;
+  --background-base-low: var(--ec-surface);
+  --background-base-lower: var(--ec-surface);
+  --background-surface-high: #2c2219;
+  --chat-background-default: var(--ec-bg);
+  --channeltextarea-background: #2c2219;
+  --text-normal: var(--ec-text);
+  --text-default: var(--ec-text);
+  --brand-experiment: var(--ec-global-accent);
+  --brand-500: var(--ec-global-accent);
+  --text-link: var(--ec-link);
+}
