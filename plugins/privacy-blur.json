@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "manifest": {
+    "id": "privacy-blur",
+    "name": "Privacy Blur",
+    "description": "Blur message text, names and avatars while streaming or screen sharing. Hover to reveal; toggle with a shortcut.",
+    "version": "1.0.0",
+    "author": "CallMeSDS",
+    "apiVersion": 1,
+    "main": "index.js",
+    "settings": [
+      {
+        "key": "key",
+        "type": "string",
+        "label": "Ctrl+Alt+ shortcut key",
+        "default": "b"
+      },
+      {
+        "key": "startOn",
+        "type": "boolean",
+        "label": "Start with blur on",
+        "default": false
+      },
+      {
+        "key": "amount",
+        "type": "number",
+        "label": "Blur amount (px)",
+        "default": 6,
+        "min": 1,
+        "max": 20
+      }
+    ]
+  },
+  "files": {
+    "index.js": "'use strict';\nlet on = false;\nfunction buildCss(s) {\n  const n = Math.min(20, Math.max(1, Number(s.amount) || 6));\n  return '[id^=\"message-content-\"],[id^=\"message-username-\"],img[class*=\"avatar\"]{filter:blur(' + n + 'px);transition:filter .12s;}\\n' +\n         '[id^=\"message-content-\"]:hover,[id^=\"message-username-\"]:hover,img[class*=\"avatar\"]:hover{filter:none;}';\n}\nfunction start() {\n  const s = api.settings.all();\n  on = !!s.startOn;\n  if (on) api.css.set(buildCss(s));\n  api.hotkey('ctrl+alt+' + String(s.key || 'b').toLowerCase().slice(0, 1), () => {\n    on = !on;\n    if (on) api.css.set(buildCss(s)); else api.css.remove();\n    api.toast(on ? 'Privacy blur on' : 'Privacy blur off');\n  });\n}\nfunction stop() { api.css.remove(); on = false; }\nmodule.exports = { start, stop, buildCss };\n"
+  }
+}

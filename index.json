@@ -1,12 +1,22 @@
 {
   "format": 1,
   "name": "EclipseCord repository",
-  "generation": 3,
-  "updatedAt": "2026-10-30T22:28:25.777Z",
-  "revoked": [
-    "privacy-blur"
-  ],
+  "generation": 4,
+  "updatedAt": "2026-10-30T22:34:20.007Z",
+  "revoked": [],
   "items": [
+    {
+      "id": "privacy-blur",
+      "type": "plugin",
+      "name": "Privacy Blur",
+      "description": "Blur message text, names and avatars while streaming or screen sharing. Hover to reveal; toggle with a shortcut.",
+      "version": "1.0.0",
+      "author": "CallMeSDS",
+      "category": "General",
+      "url": "plugins/privacy-blur.json",
+      "sha256": "f181fa9b5d0cf1c39d6fe838e3a32e6d09af2bf488a8f46b82ff5539b86a5be7",
+      "apiVersion": 1
+    },
     {
       "id": "mocha",
       "type": "theme",
